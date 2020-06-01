@@ -1,4 +1,4 @@
-FROM wordpress:php7.4-fpm
+FROM wordpress
 
 RUN apt-get update; \
      apt-get install ffmpeg -y;
