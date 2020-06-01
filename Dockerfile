@@ -1,4 +1,5 @@
 FROM wordpress:php7.4-fpm
 
-RUN apk add  --no-cache ffmpeg
+RUN apt-get update; \
+     apt-get install ffmpeg -y;
 
