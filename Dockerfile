@@ -14,6 +14,4 @@ RUN apt-get update; \
      mv wp-cli.phar /usr/local/bin/wp;
 
 #Do permissions
-# RUN mkdir /var/www/html/wp-content; \
-#      chown -R www-data:www-data /var/www/html/wp-content;
-# USER www-data
+RUN usermod -u 501 www-data
