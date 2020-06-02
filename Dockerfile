@@ -14,4 +14,4 @@ RUN apt-get update; \
      mv wp-cli.phar /usr/local/bin/wp;
 
 #Do permissions
-RUN usermod -u 501 www-data
+RUN usermod -u 1000 www-data
