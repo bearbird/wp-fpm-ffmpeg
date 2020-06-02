@@ -6,8 +6,9 @@ RUN apt-get update; \
      #Install XSendFile apache module
      apt-get install libapache2-mod-xsendfile; \
      a2enmod xsendfile; \
-     #Enable XSendFile apache module
+     #Enable and configure XSendFile apache module
      echo "XSendFile on" >> /etc/apache2/apache2.conf; \
+     echo "XSendFilePath /var/www/html/wp-content/uploads" >> /etc/apache2/apache2.conf; \
      #Install WP-CLI
      curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar; \
      chmod +x wp-cli.phar; \
