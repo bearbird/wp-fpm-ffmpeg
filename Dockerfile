@@ -9,7 +9,7 @@ RUN apt-get update; \
      apt-get install ffmpeg -y; \
      #Install XSendFile apache module
      apt-get install libapache2-mod-xsendfile; \
-     a2enmod xsendfile; \
+     a2enmod libapache2-mod-xsendfile; \
      #Enable and configure XSendFile apache module
      echo "XSendFile on" >> /etc/apache2/apache2.conf; \
      echo "XSendFilePath /var/www/html/wp-content/uploads" >> /etc/apache2/apache2.conf;
